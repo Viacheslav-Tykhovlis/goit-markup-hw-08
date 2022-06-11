@@ -1,0 +1,4 @@
+.clients__list {
+  display: flex;
+  @extend %listStyleNone;
+}

@@ -1,0 +1,23 @@
+.footer {
+  background-color: $colorFooter;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__adress {
+    margin-right: 70px;
+  }
+}
+
+.join {
+  margin-right: 93px;
+}
+
+.join__title {
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  margin-bottom: 20px;
+}

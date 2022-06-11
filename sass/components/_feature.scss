@@ -1,0 +1,34 @@
+.feature__list {
+  display: flex;
+  justify-content: space-between;
+  @extend %listStyleNone;
+}
+
+.feature__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.feature__fon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background-color: $colorFeature;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.feature__title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $colorH2-h3;
+  margin-bottom: 10px;
+}
+
+.feature__text {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  max-width: 270px;
+}

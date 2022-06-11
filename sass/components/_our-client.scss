@@ -1,10 +1,19 @@
 .our-client {
   display: block;
-  width: 170px;
   height: 92px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  margin: 15px;
+
+  @media screen and (max-width: 767px) {
+    width: 210px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
   }
 }
 

@@ -6,8 +6,16 @@
   }
 
   &__list {
-    display: flex;
     @extend %listStyleNone;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin: -15px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__descr {
@@ -22,8 +30,18 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  margin: 15px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
   }
 }
 
@@ -44,4 +62,11 @@
   letter-spacing: 0.03em;
   color: $colorText;
   margin-bottom: 16px;
+}
+
+.team__photo {
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+    height: auto;
+  }
 }

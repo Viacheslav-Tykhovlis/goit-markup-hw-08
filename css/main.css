@@ -351,7 +351,7 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .feature__item {
+  .feature__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -866,12 +866,19 @@ img {
   margin-bottom: 50px;
 }
 
-@media screen and (min-width: 768px) {
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -15px;
+}
+
+@media screen and (max-width: 767px) {
   .team__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: -15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -893,12 +900,6 @@ img {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   margin: 15px;
-}
-
-@media screen and (max-width: 767px) {
-  .team__member {
-    margin-bottom: 30px;
-  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1064,7 +1065,7 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .filter__item {
+  .filter__item:nth-child(-n + 3) {
     margin-bottom: 15px;
   }
 }
@@ -1307,7 +1308,6 @@ img {
 
 .subscription__input {
   height: 50px;
-  margin-right: 12px;
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -1343,6 +1343,7 @@ img {
 @media screen and (min-width: 1200px) {
   .subscription__input {
     width: 358px;
+    margin-right: 12px;
   }
 }
 

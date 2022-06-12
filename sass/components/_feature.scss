@@ -1,11 +1,32 @@
 .feature__list {
-  display: flex;
-  justify-content: space-between;
   @extend %listStyleNone;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin: -15px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }
 }
 
-.feature__item:not(:last-child) {
-  margin-right: 30px;
+.feature__item {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .feature__fon {
@@ -30,5 +51,5 @@
 .feature__text {
   line-height: 1.71;
   letter-spacing: 0.03em;
-  max-width: 270px;
+  // max-width: 270px;
 }

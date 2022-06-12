@@ -9,7 +9,7 @@
   justify-content: normal;
   align-items: center;
 
-  width: 528px;
+  width: 95%;
 
   padding: 40px;
 
@@ -21,6 +21,14 @@
   opacity: 1;
 
   transition: transform $generalAnimation;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 
   .backdrop.is-hidden & {
     transform: translateY(-200%);
@@ -43,6 +51,12 @@
   width: 100%;
 
   margin-bottom: 10px;
+
+  @media screen and (max-width: 767px) {
+    &:focus-within {
+      color: $colorFocus;
+    }
+  }
 }
 
 .modal__label {
@@ -53,7 +67,6 @@
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: $colorText;
 }
 
 .modal__custom {
@@ -96,6 +109,12 @@
 .modal__area-form {
   width: 100%;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 767px) {
+    &:focus-within {
+      color: $colorFocus;
+    }
+  }
 }
 
 .modal__area {

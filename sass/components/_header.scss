@@ -8,6 +8,10 @@
   margin-right: auto;
 
   &__list {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
     @extend %flexBetweenCenter;
     @extend %listStyleNone;
   }
@@ -36,6 +40,10 @@
   }
 }
 
+.header-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .header-nav__link--current {
   color: $colorFocus;
 
@@ -55,13 +63,39 @@
 }
 
 .contact-quickly {
-  @extend %flexBetweenCenter;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
   @extend %listStyleNone;
 
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__link {
-    color: $colorText;
     display: flex;
     align-items: center;
+
+    font-weight: 500;
+    color: $colorText;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color $generalAnimation;
+
+    &:hover,
+    &:focus {
+      color: $colorFocus;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
   }
 
   &__icon {
@@ -70,7 +104,12 @@
   }
 }
 
-.header-nav__item:not(:last-child),
 .contact-quickly__list:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+  }
 }

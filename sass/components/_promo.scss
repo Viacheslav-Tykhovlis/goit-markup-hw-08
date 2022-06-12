@@ -1,6 +1,10 @@
 .promo {
   padding-bottom: 94px;
 
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
   &__list {
     display: flex;
     @extend %listStyleNone;

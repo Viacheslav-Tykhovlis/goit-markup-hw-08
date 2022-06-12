@@ -17,6 +17,7 @@
 }
 
 .header__container {
+  position: relative;
   @extend %flexBetweenCenter;
 }
 

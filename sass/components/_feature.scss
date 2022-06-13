@@ -48,10 +48,13 @@
   text-transform: uppercase;
   color: $colorH2-h3;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .feature__text {
   line-height: 1.71;
   letter-spacing: 0.03em;
-  // max-width: 270px;
 }

@@ -25,25 +25,37 @@
     <header class="header">
       <div class="container header__container">
         <div class="mobile">
-          <button class="mobile__button" type="button" data-menu-button>
+          <button class="mobile__button js-open-menu" type="button">
             <svg
               class="mobile__svg"
               width="40"
               height="40"
               aria-label="Переключатель мобильного меню"
               aria-controls="mobile-menu"
+              aria-expanded="false"
             >
               <use
                 class="mobile__open"
                 href="./images/icons.svg#mobile-open"
               ></use>
-              <use
-                class="mobile__close"
-                href="./images/icons.svg#mobile-close"
-              ></use>
             </svg>
           </button>
-          <div class="mobile-menu" id="mobile-menu" data-menu>
+          <div class="mobile-menu js-menu-container" id="mobile-menu">
+            <button class="mobile__button js-close-menu" type="button">
+              <svg
+                class="mobile__svg"
+                width="40"
+                height="40"
+                aria-label="Переключатель мобильного меню"
+                aria-controls="mobile-menu"
+              >
+                <use
+                  class="mobile__close"
+                  href="./images/icons.svg#mobile-close"
+                ></use>
+              </svg>
+            </button>
+
             <ul class="mobile-menu__list">
               <li class="mobile-menu__item">
                 <a
